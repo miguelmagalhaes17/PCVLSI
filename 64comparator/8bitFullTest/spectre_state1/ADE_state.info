@@ -1,0 +1,3 @@
+projectDir = '"~/simulation"
+designInfo = '("64comparator" "8bitFullTest" "schematic" "spectre")
+descriptionText = "None"

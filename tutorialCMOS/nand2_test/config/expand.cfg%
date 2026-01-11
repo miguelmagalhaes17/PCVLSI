@@ -1,0 +1,10 @@
+//Revision 1
+config nand2_test;
+design tutorialCMOS.nand2_test:schematic;
+liblist tutorialCMOS;
+
+viewlist spectre, schematic;
+stoplist spectre;
+
+
+endconfig

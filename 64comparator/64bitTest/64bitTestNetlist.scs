@@ -1,0 +1,351 @@
+// Generated for: spectre
+// Generated on: May 14 14:09:38 2025
+// Design library name: 64comparator
+// Design cell name: 64bitTest
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/cadmgr/libs/gpdk045/v6.0/gpdk045/../models/spectre/gpdk045.scs" section=mc
+parameters parA0=1 parA1=0 parA2=0 parA3=1 parA4=0 parA5=0 parA6=0 parA7=0 parA8=0 parA9=0 parA10=0 parA11=0 parA12=0 parA13=0 parA14=0 parA15=0 parA16=0 parA17=1 parA18=0 parA19=0 parA20=1 parA21=0 parA22=0 parA23=0 parA24=0 parA25=0 parA26=0 parA27=0 parA28=0 parA29=0 parA30=0 parA31=0 parA32=0 parA33=0 parA34=0 parA35=0 parA36=1 parA37=0 parA38=0 parA39=0 parA40=0 parA41=0 parA42=0 parA43=0 parA44=0 parA45=0 parA46=0 parA47=0 parA48=0 parA49=0 parA50=1 parA51=0 parA52=0 parA53=1 parA54=0 parA55=0 parA56=0 parA57=0 parA58=0 parA59=0 parA60=0 parA61=0 parA62=0 parA63=0 parB0=1 parB1=0 parB2=0 parB3=1 parB4=0 parB5=0 parB6=0 parB7=0 parB8=0 parB9=0 parB10=0 parB11=0 parB12=0 parB13=0 parB14=0 parB15=0 parB16=0 parB17=1 parB18=0 parB19=0 parB20=1 parB21=0 parB22=0 parB23=0 parB24=0 parB25=0 parB26=0 parB27=0 parB28=0 parB29=0 parB30=0 parB31=0 parB32=0 parB33=0 parB34=0 parB35=0 parB36=1 parB37=0 parB38=0 parB39=0 parB40=0 parB41=0 parB42=0 parB43=0 parB44=0 parB45=0 parB46=0 parB47=0 parB48=0 parB49=0 parB50=1 parB51=0 parB52=0 parB53=1 parB54=0 parB55=0 parB56=0 parB57=0 parB58=0 parB59=0 parB60=0 parB61=0 parB62=0 parB63=0
+// Library name: 64comparator
+// Cell name: 2bitWhite
+// View name: schematic
+subckt _sub0 Bbig EQ EQ0\' EQ1\' G0\' G1\'
+    PM2 (Bbig EQ1\' net2 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (Bbig G1\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (net2 G0\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM4 (EQ EQ1\' net3 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (net3 EQ0\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (net4 G0\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net4 EQ1\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (Bbig G1\' net4 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ EQ0\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (EQ EQ1\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub0
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 2bitBlack
+// View name: schematic
+subckt _sub1 Bbig\' EQ\' EQ0 EQ1 G0 G1
+    PM4 (EQ\' EQ1 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (EQ\' EQ0 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (Bbig\' G1 net1 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (net1 EQ1 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (net1 G0 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ\' EQ0 net5 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (net5 EQ1 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net2 G0 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (Bbig\' EQ1 net2 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (Bbig\' G1 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub1
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 2bitEncoding
+// View name: schematic
+subckt _sub2 A B EQ G
+    PM3 (EQ B A\' vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (B A\' EQ vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (A\' A vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (B A G vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ B A 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (B A EQ 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (A\' A 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (G A 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (B A\' G 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub2
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 8bitComparator
+// View name: schematic
+subckt _sub3 Bbig\' EQ\' inA0 inA1 inA2 inA3 inA4 inA5 inA6 inA7 inB0 inB1 \
+        inB2 inB3 inB4 inB5 inB6 inB7
+    I24 (net26 net25 net24 net11 net23 net12) _sub0
+    I29 (net22 net21 net5 net20 net6 net19) _sub0
+    I39 (net19 net20 net14 net28 net13 net27) _sub1
+    I12 (net23 net24 net18 net16 net17 net15) _sub1
+    I40 (Bbig\' EQ\' net25 net21 net26 net22) _sub1
+    I23 (net12 net11 net10 net9 net8 net7) _sub1
+    I35 (net6 net5 net4 net3 net2 net1) _sub1
+    I13 (inA2 inB2 net10 net8) _sub2
+    I30 (inA5 inB5 net3 net1) _sub2
+    I36 (inA7 inB7 net28 net27) _sub2
+    I0 (inA0 inB0 net18 net17) _sub2
+    I25 (inA4 inB4 net4 net2) _sub2
+    I5 (inA1 inB1 net16 net15) _sub2
+    I18 (inA3 inB3 net9 net7) _sub2
+    I33 (inA6 inB6 net14 net13) _sub2
+ends _sub3
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 64bitComparator
+// View name: schematic
+subckt _sub4 Bbig63\:0 EQ63\:0 inA0 inA1 inA10 inA11 inA12 inA13 inA14 \
+        inA15 inA16 inA17 inA18 inA19 inA2 inA20 inA21 inA22 inA23 inA24 \
+        inA25 inA26 inA27 inA28 inA29 inA3 inA30 inA31 inA32 inA33 inA34 \
+        inA35 inA36 inA37 inA38 inA39 inA4 inA40 inA41 inA42 inA43 inA44 \
+        inA45 inA46 inA47 inA48 inA49 inA5 inA50 inA51 inA52 inA53 inA54 \
+        inA55 inA56 inA57 inA58 inA59 inA6 inA60 inA61 inA62 inA63 inA7 \
+        inA8 inA9 inB0 inB1 inB10 inB11 inB12 inB13 inB14 inB15 inB16 \
+        inB17 inB18 inB19 inB2 inB20 inB21 inB22 inB23 inB24 inB25 inB26 \
+        inB27 inB28 inB29 inB3 inB30 inB31 inB32 inB33 inB34 inB35 inB36 \
+        inB37 inB38 inB39 inB4 inB40 inB41 inB42 inB43 inB44 inB45 inB46 \
+        inB47 inB48 inB49 inB5 inB50 inB51 inB52 inB53 inB54 inB55 inB56 \
+        inB57 inB58 inB59 inB6 inB60 inB61 inB62 inB63 inB7 inB8 inB9
+    I7 (net124 net122 inA56 inA57 inA58 inA59 inA60 inA61 inA62 inA63 \
+        inB56 inB57 inB58 inB59 inB60 inB61 inB62 inB63) _sub3
+    I6 (net123 net121 inA48 inA49 inA50 inA51 inA52 inA53 inA54 inA55 \
+        inB48 inB49 inB50 inB51 inB52 inB53 inB54 inB55) _sub3
+    I5 (net120 net118 inA40 inA41 inA42 inA43 inA44 inA45 inA46 inA47 \
+        inB40 inB41 inB42 inB43 inB44 inB45 inB46 inB47) _sub3
+    I4 (net119 net117 inA32 inA33 inA34 inA35 inA36 inA37 inA38 inA39 \
+        inB32 inB33 inB34 inB35 inB36 inB37 inB38 inB39) _sub3
+    I3 (net116 net115 inA24 inA25 inA26 inA27 inA28 inA29 inA30 inA31 \
+        inB24 inB25 inB26 inB27 inB28 inB29 inB30 inB31) _sub3
+    I2 (net113 net114 inA16 inA17 inA18 inA19 inA20 inA21 inA22 inA23 \
+        inB16 inB17 inB18 inB19 inB20 inB21 inB22 inB23) _sub3
+    I1 (net111 net110 inA8 inA9 inA10 inA11 inA12 inA13 inA14 inA15 inB8 \
+        inB9 inB10 inB11 inB12 inB13 inB14 inB15) _sub3
+    I0 (net112 net97 inA0 inA1 inA2 inA3 inA4 inA5 inA6 inA7 inB0 inB1 \
+        inB2 inB3 inB4 inB5 inB6 inB7) _sub3
+    I24 (net107 net109 net101 net98 net99 net103) _sub1
+    I29 (net108 net106 net104 net100 net102 net105) _sub1
+    I12 (net99 net101 net97 net110 net112 net111) _sub0
+    I23 (net103 net98 net114 net115 net113 net116) _sub0
+    I40 (Bbig63\:0 EQ63\:0 net109 net106 net107 net108) _sub0
+    I35 (net102 net104 net117 net118 net119 net120) _sub0
+    I39 (net105 net100 net121 net122 net123 net124) _sub0
+ends _sub4
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 64bitTest
+// View name: schematic
+I41 (Bbig63\:0 EQ63\:0 inA0 inA1 inA10 inA11 inA12 inA13 inA14 inA15 inA16 \
+        inA17 inA18 inA19 inA2 inA20 inA21 inA22 inA23 inA24 inA25 inA26 \
+        inA27 inA28 inA29 inA3 inA30 inA31 inA32 inA33 inA34 inA35 inA36 \
+        inA37 inA38 inA39 inA4 inA40 inA41 inA42 inA43 inA44 inA45 inA46 \
+        inA47 inA48 inA49 inA5 inA50 inA51 inA52 inA53 inA54 inA55 inA56 \
+        inA57 inA58 inA59 inA6 inA60 inA61 inA62 inA63 inA7 inA8 inA9 inB0 \
+        inB1 inB10 inB11 inB12 inB13 inB14 inB15 inB16 inB17 inB18 inB19 \
+        inB2 inB20 inB21 inB22 inB23 inB24 inB25 inB26 inB27 inB28 inB29 \
+        inB3 inB30 inB31 inB32 inB33 inB34 inB35 inB36 inB37 inB38 inB39 \
+        inB4 inB40 inB41 inB42 inB43 inB44 inB45 inB46 inB47 inB48 inB49 \
+        inB5 inB50 inB51 inB52 inB53 inB54 inB55 inB56 inB57 inB58 inB59 \
+        inB6 inB60 inB61 inB62 inB63 inB7 inB8 inB9) _sub4
+V127 (inB63 0) vsource dc=parB63 type=dc
+V126 (inB62 0) vsource dc=parB62 type=dc
+V125 (inB61 0) vsource dc=parB61 type=dc
+V124 (inB60 0) vsource dc=parB60 type=dc
+V123 (inB59 0) vsource dc=parB59 type=dc
+V122 (inB58 0) vsource dc=parB58 type=dc
+V121 (inB57 0) vsource dc=parB57 type=dc
+V120 (inB56 0) vsource dc=parB56 type=dc
+V119 (inB55 0) vsource dc=parB55 type=dc
+V118 (inB54 0) vsource dc=parB54 type=dc
+V117 (inB53 0) vsource dc=parB53 type=dc
+V116 (inB52 0) vsource dc=parB52 type=dc
+V115 (inB51 0) vsource dc=parB51 type=dc
+V114 (inB50 0) vsource dc=parB50 type=dc
+V113 (inB49 0) vsource dc=parB49 type=dc
+V112 (inB48 0) vsource dc=parB48 type=dc
+V111 (inB47 0) vsource dc=parB47 type=dc
+V110 (inB46 0) vsource dc=parB46 type=dc
+V109 (inB45 0) vsource dc=parB45 type=dc
+V108 (inB44 0) vsource dc=parB44 type=dc
+V107 (inB43 0) vsource dc=parB43 type=dc
+V106 (inB42 0) vsource dc=parB42 type=dc
+V105 (inB41 0) vsource dc=parB41 type=dc
+V104 (inB40 0) vsource dc=parB40 type=dc
+V103 (inB39 0) vsource dc=parB39 type=dc
+V102 (inB38 0) vsource dc=parB38 type=dc
+V101 (inB37 0) vsource dc=parB37 type=dc
+V100 (inB36 0) vsource dc=parB36 type=dc
+V99 (inB35 0) vsource dc=parB35 type=dc
+V98 (inB34 0) vsource dc=parB34 type=dc
+V97 (inB33 0) vsource dc=parB33 type=dc
+V96 (inB32 0) vsource dc=parB32 type=dc
+V95 (inB31 0) vsource dc=parB31 type=dc
+V94 (inB30 0) vsource dc=parB30 type=dc
+V93 (inB29 0) vsource dc=parB29 type=dc
+V92 (inB28 0) vsource dc=parB28 type=dc
+V91 (inB27 0) vsource dc=parB27 type=dc
+V90 (inB26 0) vsource dc=parB26 type=dc
+V89 (inB25 0) vsource dc=parB25 type=dc
+V88 (inB24 0) vsource dc=parB24 type=dc
+V87 (inB23 0) vsource dc=parB23 type=dc
+V86 (inB22 0) vsource dc=parB22 type=dc
+V85 (inB21 0) vsource dc=parB21 type=dc
+V84 (inB20 0) vsource dc=parB20 type=dc
+V83 (inB19 0) vsource dc=parB19 type=dc
+V82 (inB18 0) vsource dc=parB18 type=dc
+V81 (inB17 0) vsource dc=parB17 type=dc
+V80 (inB16 0) vsource dc=parB16 type=dc
+V79 (inB15 0) vsource dc=parB15 type=dc
+V78 (inB14 0) vsource dc=parB14 type=dc
+V77 (inB13 0) vsource dc=parB13 type=dc
+V76 (inB12 0) vsource dc=parB12 type=dc
+V75 (inB11 0) vsource dc=parB11 type=dc
+V74 (inB10 0) vsource dc=parB10 type=dc
+V73 (inB9 0) vsource dc=parB9 type=dc
+V72 (inB8 0) vsource dc=parB8 type=dc
+V71 (inB7 0) vsource dc=parB7 type=dc
+V70 (inB6 0) vsource dc=parB6 type=dc
+V69 (inB5 0) vsource dc=parB5 type=dc
+V68 (inB4 0) vsource dc=parB4 type=dc
+V67 (inB3 0) vsource dc=parB3 type=dc
+V66 (inB2 0) vsource dc=parB2 type=dc
+V65 (inB1 0) vsource dc=parB1 type=dc
+V64 (inB0 0) vsource dc=parB0 type=dc
+V63 (inA63 0) vsource dc=parA63 type=dc
+V62 (inA62 0) vsource dc=parA62 type=dc
+V61 (inA61 0) vsource dc=parA61 type=dc
+V60 (inA60 0) vsource dc=parA60 type=dc
+V59 (inA59 0) vsource dc=parA59 type=dc
+V58 (inA58 0) vsource dc=parA58 type=dc
+V57 (inA57 0) vsource dc=parA57 type=dc
+V56 (inA56 0) vsource dc=parA56 type=dc
+V55 (inA55 0) vsource dc=parA55 type=dc
+V54 (inA54 0) vsource dc=parA54 type=dc
+V53 (inA53 0) vsource dc=parA53 type=dc
+V52 (inA52 0) vsource dc=parA52 type=dc
+V51 (inA51 0) vsource dc=parA51 type=dc
+V50 (inA50 0) vsource dc=parA50 type=dc
+V49 (inA49 0) vsource dc=parA49 type=dc
+V48 (inA48 0) vsource dc=parA48 type=dc
+V47 (inA47 0) vsource dc=parA47 type=dc
+V46 (inA46 0) vsource dc=parA46 type=dc
+V45 (inA45 0) vsource dc=parA45 type=dc
+V44 (inA44 0) vsource dc=parA44 type=dc
+V43 (inA43 0) vsource dc=parA43 type=dc
+V42 (inA42 0) vsource dc=parA42 type=dc
+V41 (inA41 0) vsource dc=parA41 type=dc
+V40 (inA40 0) vsource dc=parA40 type=dc
+V39 (inA39 0) vsource dc=parA39 type=dc
+V38 (inA38 0) vsource dc=parA38 type=dc
+V37 (inA37 0) vsource dc=parA37 type=dc
+V36 (inA36 0) vsource dc=parA36 type=dc
+V35 (inA35 0) vsource dc=parA35 type=dc
+V34 (inA34 0) vsource dc=parA34 type=dc
+V33 (inA33 0) vsource dc=parA33 type=dc
+V32 (inA32 0) vsource dc=parA32 type=dc
+V31 (inA31 0) vsource dc=parA31 type=dc
+V30 (inA30 0) vsource dc=parA30 type=dc
+V29 (inA29 0) vsource dc=parA29 type=dc
+V28 (inA28 0) vsource dc=parA28 type=dc
+V27 (inA27 0) vsource dc=parA27 type=dc
+V26 (inA26 0) vsource dc=parA26 type=dc
+V25 (inA25 0) vsource dc=parA25 type=dc
+V24 (inA24 0) vsource dc=parA24 type=dc
+V23 (inA23 0) vsource dc=parA23 type=dc
+V22 (inA22 0) vsource dc=parA22 type=dc
+V21 (inA21 0) vsource dc=parA21 type=dc
+V20 (inA20 0) vsource dc=parA20 type=dc
+V19 (inA19 0) vsource dc=parA19 type=dc
+V18 (inA18 0) vsource dc=parA18 type=dc
+V17 (inA17 0) vsource dc=parA17 type=dc
+V16 (inA16 0) vsource dc=parA16 type=dc
+V15 (inA15 0) vsource dc=parA15 type=dc
+V14 (inA14 0) vsource dc=parA14 type=dc
+V13 (inA13 0) vsource dc=parA13 type=dc
+V12 (inA12 0) vsource dc=parA12 type=dc
+V11 (inA11 0) vsource dc=parA11 type=dc
+V10 (inA10 0) vsource dc=parA10 type=dc
+V9 (inA9 0) vsource dc=parA9 type=dc
+V8 (inA8 0) vsource dc=parA8 type=dc
+V7 (inA7 0) vsource dc=parA7 type=dc
+V6 (inA6 0) vsource dc=parA6 type=dc
+V5 (inA5 0) vsource dc=parA5 type=dc
+V4 (inA4 0) vsource dc=parA4 type=dc
+V3 (inA3 0) vsource dc=parA3 type=dc
+V2 (inA2 0) vsource dc=parA2 type=dc
+V1 (inA1 0) vsource dc=parA1 type=dc
+V0 (inA0 0) vsource dc=parA0 type=dc
+VDD (vdd! 0) vsource dc=1.1 type=dc
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=2u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save inA0 inA1 inA2 inA3 inA4 inB40 inB41 inB42 inB43 inB44 inB45 inB46 \
+    inB47 inB48 inB49 inB5 inB50 inB51 inB52 inB53 inB54 inB55 inB56 inB57 \
+    inB58 inB59 inB6 inB60 inB61 inB62 inB63 inB7 inB8 inB9 inA10 inA11 \
+    inA12 inA13 inA14 inA15 inA16 inA17 inA18 inA19 inA20 inA21 inA22 \
+    inA23 inA24 inA25 inA26 inA27 inA28 inA29 inA30 inA31 inA32 inA33 \
+    inA34 inA35 inA36 inA37 inA38 inA39 inA40 inA41 inA42 inA43 inA44 \
+    inA45 inA46 inA47 inA48 inA49 inA5 inA50 inA51 inA52 inA53 inA54 inA55 \
+    inA56 inA57 inA58 inA59 inA6 inA60 inA61 inA62 inA63 inA7 inA8 inA9 \
+    inB0 inB1 inB10 inB11 inB12 inB13 inB14 inB15 inB16 inB17 inB18 inB19 \
+    inB2 inB20 inB21 inB22 inB23 inB24 inB25 inB26 inB27 inB28 inB29 inB3 \
+    inB30 inB31 inB32 inB33 inB34 inB35 inB36 inB37 inB38 inB39 inB4 \
+    EQ63\:0 Bbig63\:0 
+saveOptions options save=allpub

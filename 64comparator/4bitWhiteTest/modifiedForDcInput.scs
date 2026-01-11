@@ -1,0 +1,152 @@
+// Generated for: spectre
+// Generated on: Apr 24 12:20:43 2025
+// Design library name: 64comparator
+// Design cell name: 4bitWhiteTest
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/cadmgr/libs/gpdk045/v6.0/gpdk045/../models/spectre/gpdk045.scs" section=mc
+parameters parA0=1 parA1=0 parA2=0 parA3=1 parB0=0 parB1=1 parB2=1 parB3=1 
+
+// Library name: 64comparator
+// Cell name: 2bitBlack
+// View name: schematic
+subckt _sub0 Bbig\' EQ\' EQ0 EQ1 G0 G1
+    PM4 (EQ\' EQ1 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (EQ\' EQ0 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (Bbig\' G1 net1 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (net1 EQ1 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (net1 G0 vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ\' EQ0 net5 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (net5 EQ1 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net2 G0 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (Bbig\' EQ1 net2 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (Bbig\' G1 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub0
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 2bitWhite
+// View name: schematic
+subckt _sub1 Bbig EQ EQ0\' EQ1\' G0\' G1\'
+    PM2 (Bbig EQ1\' net2 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (Bbig G1\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (net2 G0\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM4 (EQ EQ1\' net3 vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (net3 EQ0\' vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f \
+        ad=16.8f ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (net4 G0\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net4 EQ1\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (Bbig G1\' net4 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ EQ0\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (EQ EQ1\' 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub1
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 2bitEncoding
+// View name: schematic
+subckt _sub2 A B EQ G
+    PM3 (EQ B A\' vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (B A\' EQ vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (A\' A vdd! vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM0 (B A G vdd!) g45p1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f \
+        ps=520n pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (EQ B A 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (B A EQ 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (A\' A 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM1 (G A 0 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM0 (B A\' G 0) g45n1svt w=(120n) l=45n nf=1 as=16.8f ad=16.8f ps=520n \
+        pd=520n nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends _sub2
+// End of subcircuit definition.
+
+// Library name: 64comparator
+// Cell name: 4bitWhiteTest
+// View name: schematic
+V6 (inB2 0) vsource dc=parB2 type=dc
+V5 (inA2 0) vsource dc=parA2 type=dc
+V8 (inB3 0) vsource dc=parB3 type=dc
+V7 (inA3 0) vsource dc=parA3 type=dc
+V2 (inA1 0) vsource dc=parA1 type=dc
+V4 (inB1 0) vsource dc=parB1 type=dc
+V1 (inA0 0) vsource dc=parA0 type=dc
+V3 (inB0 0) vsource dc=parB0 type=dc
+V0 (vdd! 0) vsource dc=1.1 type=dc
+I23 (net12 net11 net10 net9 net7 net8) _sub0
+I12 (net6 net1 net3 net5 net4 net2) _sub0
+I24 (Bbig70 EQ70 net1 net11 net6 net12) _sub1
+I13 (inA2 inB2 net10 net7) _sub2
+I18 (inA3 inB3 net9 net8) _sub2
+I5 (inA1 inB1 net5 net2) _sub2
+I0 (inA0 inB0 net3 net4) _sub2
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=5u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save inA0 inB0 inA1 inB1 inB2 inA2 inA3 inB3 EQ70 Bbig70 
+saveOptions options save=allpub

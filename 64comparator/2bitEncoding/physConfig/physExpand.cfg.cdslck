@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      pcvlsi34
+HostName                       FEUP-I221D14
+ProcessIdentifier              32638
+ProcessCreationTime_UTC        1747746835
+ProcessCreationTime_Readable   Tue May 20 14:13:55 2025 WEST
+AppIdentifier                  /home/cadmgr/cadence/IC/6.18.330/tools/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /home/pcvlsi34/projects/gpdk045/vlsi/64comparator/2bitEncoding/physConfig/physExpand.cfg
+TimeEditLocked                 Tue May 20 14:21:48 2025 WEST
